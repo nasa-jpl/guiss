@@ -1,0 +1,200 @@
+
+
+demo: True #False #True # Enable to render a single stereo pair
+
+outputIdentifier: "sample_render"
+dataset_type: "demo"
+
+####################  GEOMETRY  ####################
+
+## OPTION '1': USE_DEFAULT Enceladus terrain (geometry from blend file)
+## OPTION '2': LOAD_OBJ -> Provide .OBJ relative file path
+## OPTION '3': CREATE_RANDOM_TERRAIN -> choose the noise function parameters in the scripts/terrain.py
+
+Terrain:
+
+  ### Terrain Mode 1: Use a pre-existing (procedurally generated) blend file (uncomment 1)
+
+  blend_file: "terrain_Enceladus_low_1"
+  #blend_file: "terrain_Enceladus_low_2"
+  #blend_file: "terrain_Enceladus_low_3" 
+
+  #blend_file: "terrain_Enceladus_med_1"
+  #blend_file: "terrain_Enceladus_med_2"
+  #blend_file: "terrain_Enceladus_med_3"
+  #blend_file: "terrain_Enceladus_med_4"
+
+  #blend_file: "terrain_Enceladus_high_1"
+  #blend_file: "terrain_Enceladus_high_2"
+  #blend_file: "terrain_Enceladus_high_3"
+  #blend_file: "terrain_Enceladus_veryhigh_1"
+
+  #################### ROCKS #################### (using mode 1)
+  #blend_file: "terrain_Enceladus_low_1_rocks"
+  # NOTE: The rocks are generated procedurally using the noise parameters below
+  #Rock_Density_Factor: 0.8  # range:0 - 1.0
+  #Rock_Scale_Max: 0.8      # range:0 - 1.0 (>1.0 is also accepted but not advised)
+
+
+  ################ Procedural Subsurface ############ (using mode 1) (Sunlight rotation=[-66, 0, 0], and energy=10)
+  #blend_file: "terrain_Enceladus_low_1_procedural_subsurf" 
+
+
+  ### Terrain Mode 2: Loading a mesh as an obj file (uncomment 1)
+  
+  #mesh_name: "Athabasca_surface_2"        # Active ONLY if OPTION is 2 | from /meshes_OBJ folder
+  #mesh_name: "42m_before_NE"
+  #mesh_name: "bloodfalls"
+  #mesh_name: "seaice1"
+  #mesh_name: "Matanuska_Glacier_Site_A1"
+  #mesh_name: "Matanuska_Glacier_Site_C1"
+  #mesh_name: "svalbard1"
+  
+  ## Meshes from Gaea without dedicated textures
+  #mesh_name: "gaea_ridgy_terrain"
+  #mesh_name: "gaea_rockyPerlin"
+  #mesh_name: "gaea_rockyTerrain"
+
+
+  ### Terrain Mode 3: Use either "terrain_Enceladus_plane" as seed to procedurally generate the terrain
+  ### Make sure to update the save_blend_filename
+
+  #blend_file: "terrain_Enceladus_plane"
+  #save_blend_filename: "terrain_Enceladus_procedural_1"
+
+
+
+Textures:
+  folder: "images/"
+
+  # Choose between a provided mesh texture, an icy texture, or an albedo map.
+  # Icy-textures apply texture using an img. The rest of the properties are defined through the BRDF
+  # For the albedo maps we have the option of using roughness, normal, transmission and displacement files
+  # Leave filenames empty (e.g. mesh_texture_file: ) for BRDF values below to have an effect
+  # If mesh_texture_file is empty, then procedural texture is used following the noise parameters below
+
+
+  ## Provided mesh textures (need to match with the mesh name above when terrain mode 2)
+  
+  #mesh_texture_file: "obj-textures/Athabasca_surface_2.jpg"
+  #mesh_texture_file: "obj-textures/42m_before_NE.jpg"
+  #mesh_texture_file: "obj-textures/bloodfalls.jpg"
+  #mesh_texture_file: "obj-textures/seaice1.jpg"
+  #mesh_texture_file: "obj-textures/Matanuska_Glacier_Site_A1.jpg"
+  #mesh_texture_file: "obj-textures/Matanuska_Glacier_Site_C1.jpg"
+  #mesh_texture_file: "obj-textures/svalbard1.jpg"
+  #mesh_texture_file: "obj-textures/matanuska_playgroundb.jpg"
+
+
+  ## Icy-texture images we can use as texture files
+
+  #mesh_texture_file: "icy-textures/aaron-burden-2GwUjTNX1CE-unsplash.jpg"
+  #mesh_texture_file: "icy-textures/aaron-burden-if9vJoHDQes-unsplash.jpg"
+  #mesh_texture_file: "icy-textures/angele-kamp-g8IEMx8p_z8-unsplash.jpg"
+  #mesh_texture_file: "icy-textures/bernd-dittrich-gGpe31OT6hQ-unsplash.jpg"
+  #mesh_texture_file: "icy-textures/maaike-vrijenhoek--j-xuE8rZrg-unsplash.jpg"
+  mesh_texture_file: "icy-textures/powder-snow-texture.jpg"
+
+
+  ## Albedo Maps options (avoid using displacement maps because it distorts the geometry, unless this is a desired effect)
+  
+  # mesh_texture_file: "AlbedoMaps/Ground_Snow_seylmwd_4K_surface_ms/seylmwd_4K_albedo.jpg"  # clear this field if not using a albedo map
+  # mesh_roughness_file: "AlbedoMaps/Ground_Snow_seylmwd_4K_surface_ms/seylmwd_4K_Roughness.jpg" # clear if not using
+  # mesh_normal_file: "AlbedoMaps/Ground_Snow_seylmwd_4K_surface_ms/seylmwd_4K_normal.jpg" # clear if not using
+  # mesh_transmission_file: "AlbedoMaps/Ground_Snow_seylmwd_4K_surface_ms/seylmwd_4K_transmission.jpg" # clear if not using
+  # mesh_disp_file: "AlbedoMaps/Ground_Snow_seylmwd_4K_surface_ms/seylmwd_4K_Displacement.exr" # clear if not using
+  
+  # mesh_texture_file: "AlbedoMaps/Snow005_4K-PNG/Snow005_4K_Color.png"
+  # mesh_roughness_file: "AlbedoMaps/Snow005_4K-PNG/Snow005_4K_Roughness.png"
+  # mesh_normal_file: "AlbedoMaps/Snow005_4K-PNG/Snow005_4K_NormalGL.png"
+  # mesh_transmission_file: 
+  # mesh_disp_file: "AlbedoMaps/Snow005_4K-PNG/Snow005_4K_Displacement.png"
+
+  # mesh_texture_file: "AlbedoMaps/Snow009B_4K-PNG/Snow009B_4K_Color.png"
+  # mesh_roughness_file: "AlbedoMaps/Snow009B_4K-PNG/Snow009B_4K_Roughness.png"
+  # mesh_normal_file: "AlbedoMaps/Snow009B_4K-PNG/Snow009B_4K_NormalGL.png"
+  # mesh_transmission_file: #"AlbedoMaps/Snow009B_4K-PNG/"
+  # mesh_disp_file: "AlbedoMaps/Snow009B_4K-PNG/Snow009B_4K_Displacement.png"
+
+  # mesh_texture_file: "AlbedoMaps/ice_0001_4k_mGF6v8/ice_0001_ao_4k.jpg"
+  # mesh_roughness_file: "AlbedoMaps/ice_0001_4k_mGF6v8/ice_0001_roughness_4k.jpg"
+  # mesh_normal_file: "AlbedoMaps/ice_0001_4k_mGF6v8/ice_0001_normal_directx_4k.png"
+  # mesh_transmission_file: #"AlbedoMaps/ice_0001_4k_mGF6v8/"
+  # mesh_disp_file: "AlbedoMaps/ice_0001_4k_mGF6v8/ice_0001_height_4k.png"
+
+  # mesh_texture_file: "AlbedoMaps/Snow_Mixed_ud4lfh2r_4K_surface_ms/ud4lfh2r_4K_AO.jpg"
+  # mesh_roughness_file: "AlbedoMaps/Snow_Mixed_ud4lfh2r_4K_surface_ms/ud4lfh2r_4K_Roughness.jpg"
+  # mesh_normal_file: "AlbedoMaps/Snow_Mixed_ud4lfh2r_4K_surface_ms/ud4lfh2r_4K_Normal.jpg"
+  # mesh_transmission_file: "AlbedoMaps/Snow_Mixed_ud4lfh2r_4K_surface_ms/ud4lfh2r_4K_Transmission.jpg"
+  # mesh_disp_file: "AlbedoMaps/Snow_Mixed_ud4lfh2r_4K_surface_ms/ud4lfh2r_4K_Displacement.jpg"
+
+  # mesh_texture_file: "AlbedoMaps/Snow_Pure_ueiqbiefw_4K_surface_ms/ueiqbiefw_4K_AO.jpg"
+  # mesh_roughness_file: "AlbedoMaps/Snow_Pure_ueiqbiefw_4K_surface_ms/ueiqbiefw_4K_Roughness.jpg"
+  # mesh_normal_file: "AlbedoMaps/Snow_Pure_ueiqbiefw_4K_surface_ms/ueiqbiefw_4K_Normal.jpg"
+  # mesh_transmission_file: "AlbedoMaps/Snow_Pure_ueiqbiefw_4K_surface_ms/ueiqbiefw_4K_Transmission.jpg"
+  # mesh_disp_file: "AlbedoMaps/Snow_Pure_ueiqbiefw_4K_surface_ms/ueiqbiefw_4K_Displacement.jpg"
+
+  # mesh_texture_file: "AlbedoMaps/Snow_Pure_uepnbikfw_4K_surface_ms/uepnbikfw_4K_AO.jpg"
+  # mesh_roughness_file: "AlbedoMaps/Snow_Pure_uepnbikfw_4K_surface_ms/uepnbikfw_4K_Roughness.jpg"
+  # mesh_normal_file: "AlbedoMaps/Snow_Pure_uepnbikfw_4K_surface_ms/uepnbikfw_4K_Normal.jpg"
+  # mesh_transmission_file: "AlbedoMaps/Snow_Pure_uepnbikfw_4K_surface_ms/uepnbikfw_4K_Transmission.jpg"
+  # mesh_disp_file: "AlbedoMaps/Snow_Pure_uepnbikfw_4K_surface_ms/uepnbikfw_4K_Displacement.jpg"
+
+  # mesh_texture_file: "AlbedoMaps/Snow_Pure_ugkieimdy_4K_surface_ms/ugkieimdy_4K_AO.jpg"
+  # mesh_roughness_file: "AlbedoMaps/Snow_Pure_ugkieimdy_4K_surface_ms/ugkieimdy_4K_Roughness.jpg"
+  # mesh_normal_file: "AlbedoMaps/Snow_Pure_ugkieimdy_4K_surface_ms/ugkieimdy_4K_Normal.jpg"
+  # mesh_transmission_file: "AlbedoMaps/Snow_Pure_ugkieimdy_4K_surface_ms/ugkieimdy_4K_Transmission.jpg"
+  # mesh_disp_file: "AlbedoMaps/Snow_Pure_ugkieimdy_4K_surface_ms/ugkieimdy_4K_Displacement.jpg"
+
+  #mesh_texture_file: 
+  mesh_roughness_file: 
+  mesh_normal_file: 
+  mesh_transmission_file: 
+  mesh_disp_file: 
+
+
+
+  ################  TEXTURE PARAMETERS ####################
+  # NOTE: If the texture params are provided through the image files (above) ->
+  # ONLY params {Metallic, Specular, Subsurface_Fac} will be applied. 
+  # The texture files take precedence over the corresponding definitions below. 
+  # To use the params {e.g., Roughness, albedo etc}, users should leave the above file-fields empty.
+  # file-fields: {e.g., mesh_texture_file, mesh_roughness_file etc)
+
+
+  Albedo_RGB: [0.8, 0.8, 0.8, 0.8] #  Param[3]  RGBA
+  Roughness: 0.8 # Param[0]  default = 0.8 (for scaly texture)
+  Subsurface_Fac: 0.0 #0.5 # Param[4] Range: 0.0 - 1.0
+  Metallic: 0.0 # Param[5]  Range: 0.0 - 1.0
+  Specular: 0.5 # Param[6]  Range: 0.0 - 1.0
+  Transmission: 0.0 # Param[7]  Range: 0.0 - 1.0
+
+
+  ###### NOISE PARAMETERS  #######
+  Texture_Rotation: [0,0,0] # Param[1] | angles XYZ Euler rotation - ineffective
+  Texture_Scale: [0,0,0] #  Param[2]   | coupled but ineffective
+  Noise_Factor: 0.1 #2.0 # Param[8]  non-procedural = 0.1       | if > 1 -> large texture displacements (not good)
+  Noise_Detail: 10.0 #2.0 # Param[9]  non-procedural = 10.0      | effects normals -> prone to artifacts
+
+
+  ###### PROCEDURAL TEXTURE PARAMETERS for snow material () - Water Plane #######
+  # used only for terrain_Enceladus_low_1_procedural_subsurf
+  WaterPlane_RGB: [0.4, 0.5, 0.75, 1.0] #  Param[3]  RGBA
+
+
+################# LIGHT #################
+
+# rotation[0] controls angle from front-to-back [-90, 90]
+# rotation[1] controls angle from left-to-right [-90, 90]
+# rotation[2] is in-plane so it does not matter
+# rotation [0,0] points downwards (noon)
+
+# SunLight rotations: [0,0,0], [30,0,0], [60,0,0], [0,30,0], [0,60,0], [30,30], [30,60], [60,60], [60,30]
+
+SunLight:
+  translation: [0,0,10] #[0,0,0]
+  rotation: [0,0,0] # pitch,roll,yaw in degrees
+  energy: 10
+  angular_diameter: 0.01
+
+

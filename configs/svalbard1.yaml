@@ -1,0 +1,11 @@
+
+# Mesh geometry and texture
+Mesh:
+  mesh_file: "svalbard1"
+  mesh_texture_file: "svalbard1.jpg"
+  translation: [0,0,0]
+  rotation: [[1,0,0], [0,0,-1], [0,1,0]] # rotation matrix (rotation +90 around x axis)
+  scale: 1
+
+Sites: # Sampling site locations for particular scene
+  camera_locs: [[3.0, 13.0, -3.0], [5.0, 18.0, 2.0] ]

@@ -1,0 +1,19 @@
+
+# Samples for renderings. Higher produces better quality images
+cycles_samples: 16
+
+# Camera parameters
+camera_baseline: 0.25
+camera_focal_length: 32 # millimeters
+sensor_width: 60
+sensor_height: 18 # when sensor_fit is horizontal, then sensor height is ignored
+sensor_fit: "HORIZONTAL"
+
+# Img render size
+width: 640
+height: 480
+
+# World lighting
+exposure: -4.0
+ambient_occlusion: True
+ambient_occlusion_factor: 0.5

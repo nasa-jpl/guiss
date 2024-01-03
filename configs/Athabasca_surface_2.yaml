@@ -1,0 +1,12 @@
+
+
+# Mesh geometry and texture
+Mesh:
+  mesh_file: "Athabasca_surface_2"
+  mesh_texture_file: "Athabasca_surface_2.jpg"
+  translation: [0,0,0]
+  rotation: [[1,0,0], [0,0,-1], [0,1,0]] # rotation matrix (rotation +90 around x axis)
+  scale: 1
+
+Sites: # Sampling site locations for particular scene
+  camera_locs: [[0,0,1.39]]

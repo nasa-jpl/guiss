@@ -1,0 +1,9 @@
+meshes
+__pycache__/
+visualizations/
+data/
+stereo_matching/IGEV-Stereo/pretrained_models/
+images/
+blend_files/
+configs/job_yamls/
+stereo_matching/results/

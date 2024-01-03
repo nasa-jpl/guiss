@@ -1,0 +1,13 @@
+
+
+# Mesh geometry and texture
+Mesh:
+  mesh_file: "seaice1"
+  mesh_texture_file: "seaice1.jpg"
+  translation: [0,0,0]
+  rotation: [[1,0,0], [0,1,0], [0,0,1]] # rotation matrix
+  scale: 1
+
+
+Sites: # Sampling site locations for particular scene
+  camera_locs: [[9,5,-50.675], [10,-18,-51.701], [-10,13,-50.761], [-5,-12,-50.845], [8,-5,-50.758], [0,0,-50.278]]

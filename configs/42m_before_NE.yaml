@@ -1,0 +1,13 @@
+
+
+# Mesh geometry and texture
+Mesh:
+  mesh_file: "42m_before_NE_simplified_3d_mesh"
+  mesh_texture_file: "42m_before_NE_texture.jpg"
+  translation: [0,0,0]
+  rotation: [[1,0,0], [0,1,0], [0,0,1]] # rotation matrix
+  scale: 1
+
+Sites: # Sampling site locations for particular scene
+  camera_locs: [[25,-140,-33.55], [10,10,-47.076], [-25,25,-45.826], [-110,25,-31.522]]
+

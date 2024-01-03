@@ -1,0 +1,48 @@
+SunLight:
+  angular_diameter: 0.01
+  energy: 2.0
+  rotation:
+  - 0
+  - 0
+  - 0
+  translation:
+  - 0
+  - 0
+  - 10
+Terrain:
+  blend_file: terrain_Enceladus_low_1
+Textures:
+  Albedo_RGB:
+  - 0.2
+  - 0.2
+  - 0.2
+  - 1.0
+  Metallic: 0.0
+  Noise_Detail: 10.0
+  Noise_Factor: 0.0
+  Roughness: 0.5
+  Specular: 0
+  Subsurface_Fac: 0.0
+  Texture_Rotation:
+  - 0
+  - 0
+  - 0
+  Texture_Scale:
+  - 0
+  - 0
+  - 0
+  Transmission: 0.0
+  WaterPlane_RGB:
+  - 0.4
+  - 0.5
+  - 0.75
+  - 1.0
+  folder: images/
+  mesh_disp_file: null
+  mesh_normal_file: null
+  mesh_roughness_file: null
+  mesh_texture_file: null
+  mesh_transmission_file: null
+dataset_type: generative_texture
+demo: True
+outputIdentifier: 'ex'

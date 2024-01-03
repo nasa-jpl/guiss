@@ -1,0 +1,33 @@
+SunLight:
+  angular_diameter: 0.01
+  energy: 50.26
+  rotation:
+  - 0
+  - 0
+  - 0
+  translation:
+  - 0
+  - 0
+  - 10
+Terrain:
+  mesh_name: gaea_rockyTerrain
+Textures:
+  Albedo_RGB:
+  - 0.8
+  - 0.8
+  - 0.8
+  - 1.0
+  Metallic: 0.0
+  Roughness: 0.5
+  Specular: 0.5
+  Subsurface_Fac: 0.0
+  Transmission: 0.0
+  folder: images/
+  mesh_disp_file: null
+  mesh_normal_file: AlbedoMaps/ice_0001_4k_mGF6v8/ice_0001_normal_directx_4k.png
+  mesh_roughness_file: AlbedoMaps/ice_0001_4k_mGF6v8/ice_0001_roughness_4k.jpg
+  mesh_texture_file: AlbedoMaps/ice_0001_4k_mGF6v8/ice_0001_ao_4k.jpg
+  mesh_transmission_file: null
+dataset_type: gaea_texture_variation
+demo: True
+outputIdentifier: 'ex'

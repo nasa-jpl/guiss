@@ -1,0 +1,11 @@
+
+# Mesh geometry and texture
+Mesh:
+  mesh_file: "Site_C1_simplified_3d_mesh"
+  mesh_texture_file: "Site_C1_texture.jpg"
+  translation: [0,0,0]
+  rotation: [[1,0,0], [0,1,0], [0,0,1]] # rotation matrix
+  scale: 1
+
+Sites: # Sampling site locations for particular scene
+  camera_locs: [ [-4.0, 4.0, -6.0], [3.0, -3.0, -6.0] ]

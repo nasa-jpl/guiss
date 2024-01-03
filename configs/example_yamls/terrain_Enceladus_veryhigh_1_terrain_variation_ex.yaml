@@ -1,0 +1,43 @@
+SunLight:
+  angular_diameter: 0.01
+  energy: 4.14
+  rotation:
+  - 0
+  - 0
+  - 0
+  translation:
+  - 0
+  - 0
+  - 10
+Terrain:
+  blend_file: terrain_Enceladus_veryhigh_1
+Textures:
+  Albedo_RGB:
+  - 0.8
+  - 0.8
+  - 0.8
+  - 1.0
+  Metallic: 0.0
+  Noise_Detail: 10.0
+  Noise_Factor: 0.1
+  Roughness: 0.5
+  Specular: 0.5
+  Subsurface_Fac: 0.0
+  Texture_Rotation:
+  - 0
+  - 0
+  - 0
+  Texture_Scale:
+  - 0
+  - 0
+  - 0
+  Transmission: 0.0
+  folder: images/
+  mesh_disp_file: null
+  mesh_normal_file: AlbedoMaps/Snow_Mixed_ud4lfh2r_4K_surface_ms/ud4lfh2r_4K_Normal.jpg
+  mesh_roughness_file: AlbedoMaps/Snow_Mixed_ud4lfh2r_4K_surface_ms/ud4lfh2r_4K_Roughness.jpg
+  mesh_texture_file: AlbedoMaps/Snow_Mixed_ud4lfh2r_4K_surface_ms/ud4lfh2r_4K_AO.jpg
+  mesh_transmission_file: AlbedoMaps/Snow_Mixed_ud4lfh2r_4K_surface_ms/ud4lfh2r_4K_Transmission.jpg
+dataset_type: terrain_variation
+demo: True
+outputIdentifier: 'ex'

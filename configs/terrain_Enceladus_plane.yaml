@@ -1,0 +1,7 @@
+
+
+
+################## SAMPLING #################
+
+Sites: # Sampling site locations for particular scene
+  camera_locs: [[-2,0,3], [0,5,3]]

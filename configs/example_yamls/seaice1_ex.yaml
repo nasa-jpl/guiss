@@ -1,0 +1,33 @@
+SunLight:
+  angular_diameter: 0.01
+  energy: 50.26
+  rotation:
+  - 0
+  - 0
+  - 0
+  translation:
+  - 0
+  - 0
+  - 10
+Terrain:
+  mesh_name: seaice1
+Textures:
+  Albedo_RGB:
+  - 0.8
+  - 0.8
+  - 0.8
+  - 1.0
+  Metallic: 0.0
+  Roughness: 0.5
+  Specular: 0.0
+  Subsurface_Fac: 0.0
+  Transmission: 0.0
+  folder: images/
+  mesh_disp_file: null
+  mesh_normal_file: null
+  mesh_roughness_file: null
+  mesh_texture_file: obj-textures/seaice1.jpg
+  mesh_transmission_file: null
+dataset_type: scene_reconstructions
+demo: false
+outputIdentifier: 'ex'
