@@ -1,5 +1,5 @@
 ## Source code for the Graphical Utility for Icy Moon Surface Simulations (GUISS) tool presented in:
-### Icy Moon Surface Simulation and Stereo Depth Estimation for Sampling Autonomy [pdf] TBD
+### Icy Moon Surface Simulation and Stereo Depth Estimation for Sampling Autonomy [pdf](https://arxiv.org/pdf/2401.12414.pdf)
 Ramchander Bhaskara, Georgios Georgakis, Jeremy Nash, Marissa Cameron, Joseph Bowkett, Adnan Ansar, Manoranjan Majji, Paul Backes 
 
 IEEE Aerospace Conference 2024
